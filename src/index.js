@@ -44,13 +44,15 @@ export const getFixedValue = (number, accuracy) => {
  * @returns {number}
  */
 export const getFlooroCeil = (number) => {
-    let num = Math.trunc(number)%2;
+    const num = Math.trunc(number)%2;
     if (num === 0){
         let res = Math.floor(number);
+        return res;
     } if (num === 1) {
         let res = Math.ceil(number);
+        return res;
     }
-    return res;
+   
 };
 
 /**
@@ -62,6 +64,6 @@ export const getFlooroCeil = (number) => {
  * @returns {number}
  */
 export const randomizer = (from, to) => {
-    let rando = from - 0.5 + Math.random() * (to-from+1);
+    let rando = from - 0.5 + (Math.random() * (to-from+1));
     return rando;
 };
